@@ -1,0 +1,89 @@
+---
+name: Karla Estephanía
+surname: Zarco González
+position: "Estudiante de Maestría"
+address: "Laboratorio de Ecología de Suelos, Cinvestav Zacatenco"
+phone: 
+www: 
+email: "estephaniazg.130897@gmail.com"
+twitter: 
+github: KarlaZG
+linkedin: Karla Estephanía Zarco González 
+date: "`r format(Sys.time(), '%B %Y')`"
+output: vitae::moderncv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+
+# Acerca de mi
+
+ Tengo experiencia en técnicas de caracterización molecular y análisis de metagenoma. Mis intereses incluyen el análisis de datos y la bioinformática, la divulgación científica y proyectos de conservación del ambiente.
+
+# Educación
+
+```{r}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Bióloga Molecular", "2015-2020", "Universidad Autónoma Metropolitana", "Cuajimalpa, CDMX",
+  "Intercambio académico, Ingeniería Civil en Bioinformática","2018","Univerisdad de Talca","Talca, Chile",
+  "Maestría en Ciencias con especialidad en Biotecnología", "2020-2022", "Cinvestav Zacatenco", "CDMX, México"
+  
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where)
+```
+
+# Experiencia
+
+```{r}
+library(tibble)
+tribble(
+  ~ Proyecto, ~ Year, ~ Institution, ~ Tema,
+
+  "Proyecto terminal","2019","Laboratorio de Química, Universidad Autónoma Metropolitana","Síntesis de MOF’s con potencial para eliminar metales pesados en muestras de agua",
+   "Servicio social","2020","Laboratorio Contaminación Orgánica, ICML, UNAM","Determinación de plaguicidas organoclorados en muestras de sedimento y materia vegetal"
+  
+) %>% 
+  detailed_entries(Proyecto, Year, Institution, Tema)
+```
+
+# Idiomas
+```{r}
+library(tibble)
+tribble(
+  ~ Idioma, ~ Nivel, ~Descripcion,
+
+  "B2","Inglés"," de acuerdo con el Marco Internacional de Referencia",
+) %>% 
+  detailed_entries(Idioma, Nivel,Descripcion)
+```
+
+# Cursos
+
+```{r}
+tribble(
+  ~Year,  ~Inst,
+  2019,  "Introducción a LATEX, UAM-C",
+  2021,  "Taller Escribir para Divulgar, CONCYTEP",
+  2022,  "Diplomado en agricultura regenerativa,"
+) %>% 
+  brief_entries(
+    glue::glue(""),
+    Year, 
+    Inst
+  )
+```
+
+# Publicaciones
+
+```{r}
+library(dplyr)
+knitr::write_bib(c("Resistencia a los antibióticos: ¿el retorno a las enfermedades incurables?"), "Publications.bib")
+
+bibliography_entries("Publications.bib") %>%
+  arrange(desc(author$family), issued)
+```
+
