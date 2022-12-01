@@ -1,8 +1,8 @@
 ---
 name: Karla Estephanía
 surname: Zarco González
-position: "Estudiante de Maestría"
-address: "Laboratorio de Ecología de Suelos, Cinvestav Zacatenco"
+position: "M. C."
+address: ""
 phone: 
 www: 
 email: "estephaniazg.130897@gmail.com"
@@ -18,9 +18,9 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
 ```
 
-# Acerca de mi
+# Experiencia e intereses
 
- Tengo experiencia en técnicas de caracterización molecular y análisis de metagenoma. Mis intereses incluyen el análisis de datos y la bioinformática, la divulgación científica y proyectos de conservación del ambiente.
+ Tengo experiencia en técnicas de caracterización molecular y análisis bioinformático. Mis intereses incluyen el análisis de datos y la bioinformática, la divulgación científica y proyectos de conservación del ambiente.
 
 # Educación
 
